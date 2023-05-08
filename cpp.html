@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <titile>CPP</titile>
+    </head>
+    <body>
+        <h1>きゃりー</h1>
+        <form name="moji">
+            <ui>
+                <li>変換文字:<input type ="text" name ="kotoba" size ="3"></li>
+            </ui>
+            <input type ="button" value="きゃりー変換" onclick="cpp()";>
+        </form>
+        <p><span id = "cppstr">---</span>
+
+            <script></script>
+    </body>
+</html>
+
+<script>
+    function cpp() {
+        var moji = document.moji.kotoba.value; 
+        var cppmoji = [];
+        var arr = Array.from(moji);
+        for(let i = 0;i<4;i++){
+            if(i == 0){
+                cppmoji[i] = arr[i] + "ゃ";
+                console.log(cppmoji);
+            }
+            if( i == 1){
+                cppmoji[i] = arr[i] + "ー";
+                console.log(cppmoji);
+            }
+            if(i == 2){
+                cppmoji[i] = arr[i];
+                console.log(cppmoji);
+            }
+            if(i == 3){
+                cppmoji[i] = arr[i] + "ゅ";
+                console.log(cppmoji);
+
+            }
+        }
+        cppmoji[4] = cppmoji[2];
+        cppmoji[5] = cppmoji[3];
+        console.log(cppmoji);
+        var cppmoji =cppmoji.join("");
+        console.log(cppmoji);
+        document.getElementById("cppstr").innerHTML = cppmoji;
+    }
+</script>
