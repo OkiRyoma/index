@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <titile>℃からKに</titile>
+    </head>
+    <body>
+        <h1>温度測定</h1>
+        <form name="kerubin">
+            <ui>
+                <li>温度(℃):<input type ="text" name ="dosi" size ="3"></li>
+            </ui>
+            <input type ="button" value="ケルビンに変換" onclick="k()";>
+        </form>
+        <p>ケルビンに変換すると<span id = "kerustr">---</span>Kです。
+
+            <script></script>
+    </body>
+</html>
+
+<script>
+    function k() {
+        var dosi = document.kerubin.dosi.value; 
+        dosi =Number(dosi);
+        console.log(dosi);
+        var num = 273;
+        var keru = (dosi + num);
+
+        document.getElementById("kerustr").innerHTML = keru;
+    }
+</script>
